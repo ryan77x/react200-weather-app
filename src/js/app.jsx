@@ -1,6 +1,7 @@
 import React from 'react';
 import CityInformation from './components/CityInformation'
 import SearchHistory from './components/SearchHistory'
+import Search from './components/Search'
 
 export default class App extends React.Component {
   render() {
@@ -18,12 +19,7 @@ export default class App extends React.Component {
             <button type="button" className="btn btn-primary">London</button>
             <button type="button" className="btn btn-primary">Tokyo</button>
         </div>
-        <div className="input-group mb-3">
-          <input type="text" className="form-control" placeholder="City name"/>
-          <div className="input-group-append">
-            <button className="btn btn-outline-dark" type="submit">Go!</button>  
-          </div>
-        </div>        
+        <Search/>       
         <div className='row'>
           <div className='col-12 col-md-6 mb-4'>
             <CityInformation/>  

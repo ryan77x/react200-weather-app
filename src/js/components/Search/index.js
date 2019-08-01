@@ -1,10 +1,11 @@
 import { connect } from 'react-redux';
-import CityInformation from './CityInformation';
+import Search from './Search';
 
 function mapStoreToProps(store) {
   return {
+    input: store.search.input,
     weather_data: store.search.weather_data
   };
 }
 
-export default connect(mapStoreToProps)(CityInformation);
+export default connect(mapStoreToProps)(Search);

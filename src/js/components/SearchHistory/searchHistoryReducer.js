@@ -4,7 +4,7 @@ const defaultState = {
   lineItems: []
 };
 
-export default function IncomeReducer(state = defaultState, action) {
+export default function searchHistoryReducer(state = defaultState, action) {
   const { type, payload } = action;
 
   switch (type) {

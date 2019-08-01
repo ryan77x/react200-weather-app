@@ -7,7 +7,7 @@ import {
   addIncome
 } from './searchHistoryActions';
 
-export default class IncomeEntries extends React.Component {
+export default class SearchHistory extends React.Component {
   constructor(props) {
     super(props);
 

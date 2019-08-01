@@ -4,7 +4,7 @@ const defaultState = {
   lineItems: []
 };
 
-export default function ExpenseReducer(state = defaultState, action) {
+export default function cityInformationReducer(state = defaultState, action) {
   const { type, payload } = action;
 
   switch (type) {
