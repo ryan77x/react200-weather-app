@@ -20,7 +20,7 @@ export default class Search extends React.Component {
     dispatch(updateSearchInput(value));
   }
 
-  handleGoButton () {
+  handleGoButton() {
     const { input, dispatch } = this.props;
 
     if (input.trim() !== ''){
