@@ -17,7 +17,7 @@ export default class SearchHistory extends React.Component {
                <tbody>
                 {
                   searchHistory.map(item => (
-                    <tr>
+                    <tr key={ item.id }>
                       <td style={ { "width": "70%" } }>{ item.cityName }</td>
                       <td style={ { "width": "30%" } }>{ item.dateTime }</td>
                     </tr>

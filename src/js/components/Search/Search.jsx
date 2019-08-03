@@ -1,6 +1,5 @@
 import React from 'react';
 
-// We'll need to import all those action creators.
 import {
   updateSearchInput,
   search
@@ -29,7 +28,7 @@ export default class Search extends React.Component {
   }
 
   render() {
-    const { input, weather_data } = this.props;
+    const { input } = this.props;
 
     return (
       <div className="input-group mb-3">

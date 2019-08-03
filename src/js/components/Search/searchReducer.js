@@ -22,7 +22,7 @@ export default function searchReducer(state = defaultState, action) {
 
       return {
         input: '',
-        searchHistory: [{cityName: payload.data.name, dateTime: date + ' ' + time}, ...state.searchHistory],
+        searchHistory: [{id: state.searchHistory.length + 1, cityName: payload.data.name, dateTime: date + ' ' + time}, ...state.searchHistory],
         weather_data: payload.data
       };  
     }
