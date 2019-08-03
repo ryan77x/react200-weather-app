@@ -21,7 +21,7 @@ export default function searchReducer(state = defaultState, action) {
       let date = dateTime.toLocaleDateString();
 
       return {
-        input: '',
+        input: payload.data.name,
         searchHistory: [{id: state.searchHistory.length + 1, cityName: payload.data.name, dateTime: date + ' ' + time}, ...state.searchHistory],
         weather_data: payload.data
       };  

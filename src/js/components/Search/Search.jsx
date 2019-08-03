@@ -34,14 +34,14 @@ export default class Search extends React.Component {
       <div className="input-group mb-3">
         <input 
           type="text" 
-          className="form-control" 
+          className="form-control search-text" 
           placeholder="City name"
           value={ input }
           onChange={ this.handleSearchInput }
           />
         <div className="input-group-append">
           <button 
-            className="btn btn-outline-dark" 
+            className="btn go-btn-border-color search-text" 
             type="button" 
             onClick={ this.handleGoButton } >Go!
           </button>  
