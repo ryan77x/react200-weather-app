@@ -10,8 +10,8 @@ export default class SearchHistory extends React.Component {
     const { searchHistory } = this.props;
 
     return (
-      <div className='card border-info mb-3'>
-        <div className='card-header text-primary bg-info'>Search History</div>
+      <div className='card card-border-color mb-3'>
+        <div className='card-header card-header-color'>Search History</div>
         <div className='card-body'>
             <table className='table table-sm table-hover table-striped'>
                <tbody>

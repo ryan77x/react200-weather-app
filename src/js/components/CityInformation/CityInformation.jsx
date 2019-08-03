@@ -17,8 +17,8 @@ export default class CityInformation extends React.Component {
     }
 
     return (
-      <div className='card border-info mb-3'>
-        <div className='card-header text-primary bg-info'>City Information</div>
+      <div className='card card-border-color mb-3'>
+        <div className='card-header card-header-color'>City Information</div>
         <div className='card-body'>
           <div className='container'>
             <div className='row justify-content-center'>

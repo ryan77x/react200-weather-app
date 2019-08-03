@@ -22,27 +22,27 @@ export default class FavoriteCities extends React.Component {
       <div className="btn-group">
         <button 
           type="button" 
-          className="btn btn-primary"
+          className="btn btn-color"
           onClick={ () => this.handleButtons("San Diego") } >San Diego
         </button>
         <button 
           type="button" 
-          className="btn btn-primary"
+          className="btn btn-color"
           onClick={ () => this.handleButtons("New York") } >New York
         </button>
         <button 
           type="button" 
-          className="btn btn-primary"
+          className="btn btn-color"
           onClick={ () => this.handleButtons("Washington") } >Washington D.C
         </button>
         <button 
           type="button" 
-          className="btn btn-primary"
+          className="btn btn-color"
           onClick={ () => this.handleButtons("London") } >London
         </button>
         <button 
           type="button" 
-          className="btn btn-primary"
+          className="btn btn-color"
           onClick={ () => this.handleButtons("Tokyo") } >Tokyo
         </button>
       </div>
