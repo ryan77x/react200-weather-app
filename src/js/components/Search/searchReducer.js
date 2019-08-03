@@ -1,5 +1,6 @@
 const defaultState = {
   input: '',
+  searchHistory: [],
   weather_data: {}
 };
 
@@ -15,10 +16,15 @@ export default function searchReducer(state = defaultState, action) {
     }
 
     case 'GET_WEATHER_FULFILLED': {
+      let dateTime = new Date();
+      let time = dateTime.toLocaleTimeString(('en-GB'));
+      let date = dateTime.toLocaleDateString();
+
       return {
         input: '',
+        searchHistory: [{cityName: payload.data.name, dateTime: date + ' ' + time}, ...state.searchHistory],
         weather_data: payload.data
-      };
+      };  
     }
 
     default: {
