@@ -11,6 +11,7 @@ export default class Search extends React.Component {
 
     this.handleSearchInput = this.handleSearchInput.bind(this);
     this.handleGoButton = this.handleGoButton.bind(this);
+    this.handleKeyPress = this.handleKeyPress.bind(this);
   }
 
   handleSearchInput(event) {
@@ -20,30 +21,41 @@ export default class Search extends React.Component {
   }
 
   handleGoButton() {
-    const { input, dispatch } = this.props;
+    const { cityNameInput, dispatch } = this.props;
 
-    if (input.trim() !== ''){
-      dispatch(search(input));
+    if (cityNameInput.trim() !== ''){
+      dispatch(search(cityNameInput));
     }
   }
 
+  handleKeyPress(event) {
+    if(event.key === 'Enter'){
+      const { cityNameInput, dispatch } = this.props;
+
+      if (cityNameInput.trim() !== ''){
+        dispatch(search(cityNameInput));
+      }
+    }
+  }
+  
   render() {
-    const { input } = this.props;
+    const { cityNameInput } = this.props;
 
     return (
       <div className="input-group mb-3">
         <input 
           type="text" 
           className="form-control search-text" 
-          placeholder="City name"
-          value={ input }
+          placeholder='City name search examples: "san diego" or "san diego, us" or "92111, us"'
+          value={ cityNameInput }
           onChange={ this.handleSearchInput }
           />
         <div className="input-group-append">
           <button 
             className="btn go-btn-border-color search-text" 
             type="button" 
-            onClick={ this.handleGoButton } >Go!
+            onClick={ this.handleGoButton } 
+            onKeyPress={this.handleKeyPress} >Go!
           </button>  
         </div>
       </div>  

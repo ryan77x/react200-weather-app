@@ -2,7 +2,7 @@ import React from 'react';
 
 import {
   search
-} from './favoriteCitiesActions';
+} from '../Search/searchActions';
 
 export default class FavoriteCities extends React.Component {
   constructor(props) {

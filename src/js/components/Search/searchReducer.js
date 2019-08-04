@@ -1,7 +1,7 @@
 const defaultState = {
-  input: '',
+  cityNameInput: '',
   searchHistory: [],
-  weather_data: {}
+  weatherData: {}
 };
 
 export default function searchReducer(state = defaultState, action) {
@@ -11,7 +11,7 @@ export default function searchReducer(state = defaultState, action) {
     case 'UPDATE_SEARCH_INPUT': {
       return {
         ...state,
-        input: payload.input
+        cityNameInput: payload.input
       };
     }
 
@@ -21,9 +21,9 @@ export default function searchReducer(state = defaultState, action) {
       let date = dateTime.toLocaleDateString();
 
       return {
-        input: payload.data.name,
+        cityNameInput: payload.data.name,
         searchHistory: [{id: state.searchHistory.length + 1, cityName: payload.data.name, dateTime: date + ' ' + time}, ...state.searchHistory],
-        weather_data: payload.data
+        weatherData: payload.data
       };  
     }
 

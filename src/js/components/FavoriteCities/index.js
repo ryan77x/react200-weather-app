@@ -3,7 +3,7 @@ import FavoriteCities from './FavoriteCities';
 
 function mapStoreToProps(store) {
   return {
-    //weather_data: store.search.weather_data
+
   };
 }
 
