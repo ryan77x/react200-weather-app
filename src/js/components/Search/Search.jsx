@@ -49,13 +49,13 @@ export default class Search extends React.Component {
           placeholder='City name search examples: "san diego" or "san diego, us" or "92111, us"'
           value={ cityNameInput }
           onChange={ this.handleSearchInput }
+          onKeyPress={ this.handleKeyPress }
           />
         <div className="input-group-append">
           <button 
             className="btn go-btn-border-color search-text" 
             type="button" 
-            onClick={ this.handleGoButton } 
-            onKeyPress={this.handleKeyPress} >Go!
+            onClick={ this.handleGoButton } >Go!
           </button>  
         </div>
       </div>  

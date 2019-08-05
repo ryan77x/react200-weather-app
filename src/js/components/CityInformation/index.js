@@ -3,7 +3,8 @@ import CityInformation from './CityInformation';
 
 function mapStoreToProps(store) {
   return {
-    weatherData: store.search.weatherData
+    weatherData: store.search.weatherData,
+    notFound: store.search.notFound
   };
 }
 

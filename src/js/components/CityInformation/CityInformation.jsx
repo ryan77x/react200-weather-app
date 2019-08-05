@@ -6,10 +6,16 @@ export default class CityInformation extends React.Component {
   }
 
   render() {
-    const { weatherData } = this.props;
+    const { weatherData, notFound } = this.props;
     let display = null;
 
-    if (Object.keys(weatherData).length > 0){
+    if (notFound === null){
+      display = <div></div>
+    }
+    else if (notFound){
+      display = <div>City name not found.</div>
+    }
+    else{
       let weatherImage = 'https://openweathermap.org/img/wn/' + weatherData.weather[0].icon + '@2x.png';
 
       display =  
@@ -50,9 +56,6 @@ export default class CityInformation extends React.Component {
             </div>
           </div>
         </div>
-    }
-    else{
-      display = <div></div>
     }
 
     return (
